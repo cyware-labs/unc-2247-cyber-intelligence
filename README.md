@@ -2,7 +2,7 @@
 ## Table Of Contents:
 
 - [Introduction](#Introduction)
-- [IOC's](#IOC's)
+- [IOCs](#IOCs)
   - IP Addresses
   - Domains
   - Email Addresses
@@ -25,7 +25,7 @@ The attack was attributed to UNC 2247, a financially motivated threat actor who 
 
 This repository created by Cyware is a collection of actionable threat intelligence on the threat actor and the attack from across the internet. The repository has been created to provide a single window, and centralized access to security teams to threat intelligence against UNC 2247.  
 
-## IOC's
+## IOCs
 Below mentioned are the indicators of compromise (IOCs) observed to be involved with UNC 2247 across attacks using the Yanluowang Ransomware.
 
 _Note: IOCs shared below are fanged IOCs_
